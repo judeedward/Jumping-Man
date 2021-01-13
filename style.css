@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#game {
+    height: 300px;
+    width: 100%;
+    background-color: rgba(91, 113, 113, 0.546);
+    background: cover;
+    
+}
+
+h1 {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-left: 2px;
+}
+
+.player-image {
+        background: url("RunningSpritesheet.png");
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin-top: 200px;
+        margin-left: 2%; 
+        animation: player-run 1s steps(5) infinite;
+        
+}
+
+
+.obstacle-image {
+    background: url("tumbleweed.png");
+    width: 46px;
+    height: 47px;
+    display: block;
+    animation: obstacle-move 5s infinite linear;
+    position: relative;
+    margin-left: 95%;
+    margin-top: -3.5%;
+
+}
+
+#background {
+    background-size: cover;
+}
+
+@keyframes player-run {
+    0% {background-position: 1500px;}
+    100% {background-position: 0px;}
+}
+
+@keyframes obstacle-move {
+    0% {transform:translateX(300px);}
+    100% {transform:translateX(-2000px);}
+}
+
